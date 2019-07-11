@@ -20,3 +20,38 @@ Start the server:
 ```
 $ npm start
 ```
+
+## API Calls
+### Base URL:
+  > ```http://localhost:3001```
+
+### GET:
+``` GET /chat```:
+  > This Endpoint will return all available chat messages
+
+  **Example Response:**
+
+  ```
+  [
+    {"id": "1",
+    "user": "Dylan",
+    "message": "Guild is Awesome!"},
+    {"id": "2",
+    "user": "Eric",
+    "message": "Yes! Guild is indeed Awesome!"}
+  ]
+```
+### POST:
+  > This Endpoint will add a chat message to the server:
+
+``` POST /chat:```
+
+  **Required Input for Request Body:**
+
+| Name      | Type      | Description|
+|-----------|-----------|------------|
+|`id`     | `string`  | unique id for the message|
+|`user`   | `string`  | user sending message|
+|`message`   | `string`  | message|
+
+
